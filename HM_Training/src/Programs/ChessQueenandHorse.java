@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ChessQueenandHorse {
 
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the row value of Queen");
@@ -71,3 +71,4 @@ public class ChessQueenandHorse {
 //Enter the Column value of Horse
 //4
 //Cut
+
