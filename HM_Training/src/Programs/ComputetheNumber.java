@@ -15,10 +15,13 @@ public class ComputetheNumber {
 		int count = 0;
 		int sum = 0;
 		int num2 = num;
+		//Check the number of digit
 		while (num2 > 0) {
 			count++;
 			num2 = num2 / 10;
 		}
+		//Create an array with the size of no.of digits
+		//Apply the given calculation condition 
 		int[] arr = new int[count];
 		for (int i = count - 1; i >= 0; i--) {
 			int num3 = num % 10;
@@ -29,12 +32,12 @@ public class ComputetheNumber {
 			if (i + 1 < arr.length) {
 				int d = (int) Math.pow(arr[i], arr[i + 1]);
 				sum = sum + d;
-			} else {
+			} else 
+			{
 				int e = (int) Math.pow(arr[i], arr[0]);
 				sum = sum + e;
 			}
 		}
 		System.out.println("Result of the given number is : " + sum);
 	}
-
 }

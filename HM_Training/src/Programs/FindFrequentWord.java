@@ -40,12 +40,10 @@ public class FindFrequentWord {
 			if (a[i] != "*"&&b[i]!=1) {
 
 				map.put(a[i], b[i]);
-//				//System.out.println(a[i]+b[i]);
 			}
 		}
 		 Set<Entry<String, Integer>> set = map.entrySet();
-	        List<Entry<String, Integer>> list = new ArrayList<Entry<String, Integer>>(
-	                set);
+	        List<Entry<String, Integer>> list = new ArrayList<Entry<String, Integer>>(set);
 	        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
 	            public int compare(Map.Entry<String, Integer> o1,
 	                    Map.Entry<String, Integer> o2) {
@@ -59,15 +57,6 @@ public class FindFrequentWord {
 	        	i++;
 	        	}
 	        }
-
-
-//		int l = 0;
-//		for (Map.Entry<String,Integer> entry : map.entrySet()) {
-//		    if (l < 5) {
-//		        System.out.println(entry.getKey() + " = " + entry.getValue());
-//		        l++;
-//		    }
-//				}
 }
 }
 

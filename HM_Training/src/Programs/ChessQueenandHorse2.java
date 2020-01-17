@@ -9,30 +9,30 @@ public class ChessQueenandHorse2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the row value of Queen");
-		int a = sc.nextInt();
+		int Queen_Row = sc.nextInt();
 		System.out.println("Enter the Column value of Queen");
-		int b = sc.nextInt();
+		int Queen_Column = sc.nextInt();
 		System.out.println("Enter the row value of Horse");
-		int c = sc.nextInt();
+		int Horse_Row = sc.nextInt();
 		System.out.println("Enter the Column value of Horse");
-		int d = sc.nextInt();
+		int Horse_Column = sc.nextInt();
 		int m = 8, n = 8;
 		boolean flag = false;
-		for (int i = 0; i < m; i++) {
-			for (int j = 0; j < n; j++) {
-			if(((a+b)==(c+d))||((c-d)==(a-b))||(((i==a)||(j==b))&&((c==a)||(d==b)))){
+		//Addition of row and column value of queen is equals to addition of row and column value of horse
+		//Difference between the row and column value is equals to difference between the row and column value of horse
+		//column value or row value of queen is equals to column or row value of horse
+			if(((Queen_Row+Queen_Column)==(Horse_Row+Horse_Column))||((Horse_Row-Horse_Column)==(Queen_Row-Queen_Column))||((Horse_Row==Queen_Row)||(Horse_Column==Queen_Column)))
+			{
 				flag=true;
-				break;
 			}
-			}
-		}
 		if(flag==true){
 			System.out.println("Cut");
 		}
 		else{
 			System.out.println("Not cut");
 		}
-}}
+}
+	}
 //Output
 //Enter the row value of Queen
 //3
@@ -43,3 +43,4 @@ public class ChessQueenandHorse2 {
 //Enter the Column value of Horse
 //5
 //Not cut
+
